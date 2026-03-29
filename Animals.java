@@ -1,8 +1,8 @@
-abstract class Animals implements Comparable<Animals>, Cloneable{
+public abstract class Animals implements Comparable<Animals>, Cloneable{
 
-    private String name;
-    private int age;
-    private double weight;
+    protected String name;
+    protected int age;
+    protected double weight;
 
     public Animals (String name, int age, double weight) {
         this.name = name;
