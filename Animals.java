@@ -29,4 +29,28 @@ public abstract class Animals implements Comparable<Animals>, Cloneable{
     protected Animals clone() throws CloneNotSupportedException {
         return (Animals) super.clone();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }
