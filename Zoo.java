@@ -52,6 +52,10 @@ public class Zoo {
                     innerChoice = input.nextInt();
                     break;
                 }
+                default: {
+                    System.out.println("Geçersiz Seçim!");
+                    break;
+                }
             }
 
             if (innerChoice == 1) {
