@@ -11,6 +11,6 @@ class Dolphin extends Animals implements Swimmable{
 
     @Override
     public void swim() {
-        System.out.println("Yunus yüzüyor.");
+        System.out.println(getName() + " yüzüyor.");
     }
 }
