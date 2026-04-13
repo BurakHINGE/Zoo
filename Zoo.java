@@ -14,35 +14,58 @@ public class Zoo {
         System.out.println("===== Hayvanat Bahçesine Hoş Geldin =====");
         System.out.println("Hangi hayvanlara bakmak istersin?\n1 - Aslanlar\n2 - Kartallar\n3 - Yunuslar");
         int choice = input.nextInt();
+        int innerChoice = 0;
 
-        if (choice == 1) {
-            for (Animals a : zoo) {
-                if (a instanceof Lion) {
-                    ((Runnable) a).run();
-                    a.makeSound();
+        while (true) {
+
+            switch (choice) {
+                case 1: {
+                    for (Animals a : zoo) {
+                        if (a instanceof Lion) {
+                            ((Runnable) a).run();
+                            a.makeSound();
+                        }
+                    }
+                    System.out.println("1 - Tekrar Bak\n2 - Geri Dön");
+                    innerChoice = input.nextInt();
+                    break;
+                }
+                case 2: {
+                    for (Animals a : zoo) {
+                        if (a instanceof Eagle) {
+                            ((Flyable) a).fly();
+                            a.makeSound();
+                        }
+                    }
+                    System.out.println("1 - Tekrar Bak\n2 - Geri Dön");
+                    innerChoice = input.nextInt();
+                    break;
+                }
+                case 3: {
+                    for (Animals a : zoo) {
+                        if (a instanceof Dolphin) {
+                            ((Swimmable) a).swim();
+                            a.makeSound();
+                        }
+                    }
+                    System.out.println("1 - Tekrar Bak\n2 - Geri Dön");
+                    innerChoice = input.nextInt();
+                    break;
+                }
+            }
+
+            if (innerChoice == 1) {
+                continue;
+            }
+            else if (innerChoice == 2) {
+                System.out.println("Girişe Dönüldü");
+                System.out.println("Hangi hayvanlara bakmak istersin?\n1 - Aslanlar\n2 - Kartallar\n3 - Yunuslar\n4 - Hayvanat Bahçesinden Ayrıl");
+                choice = input.nextInt();
+                if (choice == 4) {
+                    System.out.println("Hayvanat Bahçesinden Ayrılıyorsunuz...");
+                    break;
                 }
             }
         }
-
-        System.out.println("=== Hayvan Sesleri ===");
-        for (Animals a : zoo) {
-            a.makeSound();
-        }
-
-        System.out.println("=== Hayvanlar Ne Yapıyor ===");
-        for (Animals a : zoo) {
-            if (a instanceof Runnable) {
-                ((Runnable) a).run();
-            }
-            else if (a instanceof Swimmable) {
-                ((Swimmable) a).swim();
-            }
-            else if (a instanceof Flyable) {
-                ((Flyable) a).fly();
-            }
-        }
-
-        
-
     }
 }
