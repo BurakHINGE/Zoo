@@ -11,7 +11,7 @@ class Lion extends Animals implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Aslan koşuyor.");
+        System.out.println(getName() + " koşuyor.");
     }
 
 }
