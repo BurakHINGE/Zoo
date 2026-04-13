@@ -5,8 +5,8 @@
 ---
 
 ## 📌 Sürüm Bilgisi | Version Info  
- ● Current Version: 1.0.0  
- ● Geçerli Sürüm: 1.0.0  
+ ● Current Version: 1.0.1
+ ● Geçerli Sürüm: 1.0.1  
 
 ---
 
@@ -106,6 +106,7 @@ javac Zoo
 
 | Version | Date       | Description |
 |--------:|------------|-------------|
+| v1.0.1  | 2026-04-14 | Menu updated - Name-based actions added / Menü güncellendi - İsme özel özellikler eklendi |
 | v1.0.0  | 2026-04-10 | Initial release of Zoo project / Zoo projesinin ilk sürümü |
 
 ---
